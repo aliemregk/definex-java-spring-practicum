@@ -24,8 +24,8 @@ public class House extends AbstractPropertyBase {
         return "ID: " + getId() + " - "
                 + "Price: " + getPrice() + " - "
                 + "Square Meters: " + getSquareMeters() + " - "
-                + "Rooms: " + getRoomNumber() + " - "
-                + "Salon(s): " + getSalonNumber() + " - "
+                + "Rooms: " + getRoomCount() + " - "
+                + "Salon(s): " + getSalonCount() + " - "
                 + "Detached: " + (isDetached() ? "Yes" : "No");
     }
 

@@ -6,9 +6,9 @@ public class SummerHouse extends AbstractPropertyBase {
 
     private boolean isFurnished;
 
-    public SummerHouse(int id, Double price, Double squareMeters, int roomNumber, int salonNumber,
+    public SummerHouse(int id, Double price, Double squareMeters, int roomCount, int salonCount,
             boolean isFurnished) {
-        super(id, price, squareMeters, roomNumber, salonNumber);
+        super(id, price, squareMeters, roomCount, salonCount);
         this.isFurnished = isFurnished;
     }
 
@@ -25,8 +25,8 @@ public class SummerHouse extends AbstractPropertyBase {
         return "ID: " + getId() + " - "
                 + "Price: " + getPrice() + " - "
                 + "Square Meters: " + getSquareMeters() + " - "
-                + "Rooms: " + getRoomNumber() + " - "
-                + "Salon(s): " + getSalonNumber() + " - "
+                + "Rooms: " + getRoomCount() + " - "
+                + "Salon(s): " + getSalonCount() + " - "
                 + "Furniture: " + (isFurnished() ? "Yes" : "No");
     }
 }

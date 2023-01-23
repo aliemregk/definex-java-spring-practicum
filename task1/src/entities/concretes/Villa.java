@@ -6,8 +6,8 @@ public class Villa extends AbstractPropertyBase {
 
     private boolean hasPool;
 
-    public Villa(int id, Double price, Double squareMeters, int roomNumber, int salonNumber, boolean hasPool) {
-        super(id, price, squareMeters, roomNumber, salonNumber);
+    public Villa(int id, Double price, Double squareMeters, int roomCount, int salonCount, boolean hasPool) {
+        super(id, price, squareMeters, roomCount, salonCount);
         this.hasPool = hasPool;
     }
 
@@ -24,8 +24,8 @@ public class Villa extends AbstractPropertyBase {
         return "ID: " + getId() + " - "
                 + "Price: " + getPrice() + " - "
                 + "Square Meters: " + getSquareMeters() + " - "
-                + "Rooms: " + getRoomNumber() + " - "
-                + "Salon(s): " + getSalonNumber() + " - "
+                + "Rooms: " + getRoomCount() + " - "
+                + "Salon(s): " + getSalonCount() + " - "
                 + "Pool: " + (hasPool() ? "Yes" : "No");
     }
 }

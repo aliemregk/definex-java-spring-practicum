@@ -40,19 +40,19 @@ public abstract class AbstractPropertyBase {
         this.squareMeters = squareMeters;
     }
 
-    public int getRoomNumber() {
+    public int getRoomCount() {
         return roomCount;
     }
 
-    public void setRoomNumber(int roomCount) {
+    public void setRoomCount(int roomCount) {
         this.roomCount = roomCount;
     }
 
-    public int getSalonNumber() {
+    public int getSalonCount() {
         return salonCount;
     }
 
-    public void setSalonNumber(int salonCount) {
+    public void setSalonCount(int salonCount) {
         this.salonCount = salonCount;
     }
 
