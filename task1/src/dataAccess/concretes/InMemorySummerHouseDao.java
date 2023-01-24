@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 import dataAccess.abstracts.SummerHouseDao;
 import entities.concretes.SummerHouse;
 
+/*
+ * Dao class for summer house entity. Creates summer house entities and performs
+ * CRUD operations.
+ */
 public class InMemorySummerHouseDao implements SummerHouseDao {
 
     private List<SummerHouse> summerHouseList;

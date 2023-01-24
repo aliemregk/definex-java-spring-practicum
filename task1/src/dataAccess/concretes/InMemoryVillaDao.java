@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 import dataAccess.abstracts.VillaDao;
 import entities.concretes.Villa;
 
+/*
+ * Dao class for villa entity. Creates villa entities and performs CRUD
+ * operations.
+ */
 public class InMemoryVillaDao implements VillaDao {
 
     private List<Villa> villaList;

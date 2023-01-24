@@ -19,12 +19,20 @@ public class Main {
         allPropertiesTest();
     }
 
+    /**
+     * @param <T>
+     * @param list
+     * Generic function for printing given list's items to console.
+     */
     private static <T> void printToConsole(List<T> list) {
         for (T entity : list) {
             System.out.println(entity.toString());
         }
     }
 
+    /**
+     * Tests for villa entity.
+     */
     static void villaTest() {
 
         VillaManager villaManager = new VillaManager(new InMemoryVillaDao());
@@ -54,6 +62,9 @@ public class Main {
         System.out.println("--- Villa test end. ---");
     }
 
+    /**
+     * Tests for house entity.
+     */
     static void houseTest() {
 
         HouseManager houseManager = new HouseManager(new InMemoryHouseDao());
@@ -84,6 +95,9 @@ public class Main {
 
     }
 
+    /**
+     * Tests for summer house entity.
+     */
     static void summerHouseTest() {
 
         SummerHouseManager summerHouseManager = new SummerHouseManager(new InMemorySummerHouseDao());
@@ -114,6 +128,9 @@ public class Main {
 
     }
 
+    /**
+     * Tests for all properties.
+     */
     static void allPropertiesTest() {
 
         PropertyManager propertyManager = new PropertyManager(new InMemoryPropertyDao(), new InMemoryVillaDao(),

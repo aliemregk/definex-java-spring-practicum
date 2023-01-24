@@ -2,6 +2,9 @@ package dataAccess.abstracts;
 
 import java.util.List;
 
+/*
+ * Generic base interface for entity operations.
+ */
 public interface EntityDaoBase<T> {
 
     List<T> getAll();

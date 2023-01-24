@@ -1,5 +1,9 @@
 package entities.abstracts;
 
+/*
+ * Abstract base class for property entities such as villa, house and summer
+ * house.
+ */
 public abstract class AbstractPropertyBase {
 
     private int id;

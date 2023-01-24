@@ -6,6 +6,10 @@ import java.util.stream.Collectors;
 import dataAccess.abstracts.PropertyDao;
 import entities.abstracts.AbstractPropertyBase;
 
+/*
+ * Dao class for properties(all of the entities). Performs operations including
+ * all entities.
+ */
 public class InMemoryPropertyDao implements PropertyDao {
 
     @Override

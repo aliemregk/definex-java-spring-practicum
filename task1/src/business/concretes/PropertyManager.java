@@ -28,6 +28,9 @@ public class PropertyManager implements PropertyService {
         createList();
     }
 
+    /**
+     * Create list to store all types of property.
+     */
     private void createList() {
         list = new ArrayList<>();
         list.addAll(villaDao.getAll());

@@ -7,6 +7,10 @@ import java.util.stream.Collectors;
 import dataAccess.abstracts.HouseDao;
 import entities.concretes.House;
 
+/*
+ * Dao class for house entity. Creates house entities and performs
+ * CRUD operations.
+ */
 public class InMemoryHouseDao implements HouseDao {
 
     private List<House> houseList;
