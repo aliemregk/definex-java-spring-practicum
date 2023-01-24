@@ -9,7 +9,7 @@ import entities.concretes.Villa;
 
 public class InMemoryVillaDao implements VillaDao {
 
-    public List<Villa> villaList;
+    private List<Villa> villaList;
 
     public InMemoryVillaDao() {
         villaList = new ArrayList<>();
@@ -21,7 +21,7 @@ public class InMemoryVillaDao implements VillaDao {
 
     @Override
     public List<Villa> getAll() {
-        return villaList;
+        return new ArrayList<>(villaList);
     }
 
     @Override

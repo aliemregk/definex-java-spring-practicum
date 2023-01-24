@@ -13,10 +13,10 @@ public class InMemorySummerHouseDao implements SummerHouseDao {
 
     public InMemorySummerHouseDao() {
         summerHouseList = new ArrayList<>();
-        summerHouseList.add(new SummerHouse(1, 1000000D, 250D, 4, 1, false));
-        summerHouseList.add(new SummerHouse(2, 1100000D, 230D, 4, 1, true));
-        summerHouseList.add(new SummerHouse(3, 1400000D, 300D, 5, 2, true));
-        summerHouseList.add(new SummerHouse(4, 200000D, 400D, 6, 2, true));
+        summerHouseList.add(new SummerHouse(9, 1000000D, 250D, 4, 1, false));
+        summerHouseList.add(new SummerHouse(10, 1100000D, 230D, 4, 1, true));
+        summerHouseList.add(new SummerHouse(11, 1400000D, 300D, 5, 2, true));
+        summerHouseList.add(new SummerHouse(12, 200000D, 400D, 6, 2, true));
     }
 
     @Override

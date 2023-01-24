@@ -13,10 +13,10 @@ public class InMemoryHouseDao implements HouseDao {
 
     public InMemoryHouseDao() {
         houseList = new ArrayList<>();
-        houseList.add(new House(1, 800000D, 150D, 3, 1, false));
-        houseList.add(new House(2, 900000D, 180D, 4, 1, false));
-        houseList.add(new House(3, 1000000D, 300D, 5, 2, true));
-        houseList.add(new House(4, 850000D, 160D, 4, 1, true));
+        houseList.add(new House(5, 800000D, 150D, 3, 1, false));
+        houseList.add(new House(6, 900000D, 180D, 4, 1, false));
+        houseList.add(new House(7, 1000000D, 300D, 5, 2, true));
+        houseList.add(new House(8, 850000D, 160D, 4, 1, true));
     }
 
     @Override
