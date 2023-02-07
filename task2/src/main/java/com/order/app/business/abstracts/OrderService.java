@@ -10,4 +10,10 @@ public interface OrderService extends BaseService<Order> {
 
     List<Order> getAllByPriceMoreThan(double price);
 
+    double getSumByCustomerRegisterDate(int month);
+
+    List<Order> getAllByCustomerRegisterDate(int month);
+
+    double getAverageByPriceGreaterThan(double price);
+
 }

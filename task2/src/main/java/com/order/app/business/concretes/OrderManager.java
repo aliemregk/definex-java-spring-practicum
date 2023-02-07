@@ -65,4 +65,19 @@ public class OrderManager implements OrderService {
         return orderDao.getAllByPriceGreaterThan(price);
     }
 
+    @Override
+    public double getSumByCustomerRegisterDate(int month) {
+        return orderDao.getSumByCustomer_RegisterDate(month);
+    }
+
+    @Override
+    public List<Order> getAllByCustomerRegisterDate(int month) {
+        return orderDao.getAllByCustomer_RegisterDate(month);
+    }
+
+    @Override
+    public double getAverageByPriceGreaterThan(double price) {
+        return orderDao.getAverageByPriceGreaterThan(price);
+    }
+
 }

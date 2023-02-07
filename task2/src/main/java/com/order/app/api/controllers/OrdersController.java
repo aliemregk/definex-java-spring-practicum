@@ -61,4 +61,18 @@ public class OrdersController {
         return orderService.getAllByPriceMoreThan(price);
     }
 
+    @GetMapping(path = "/getsumbycustomerregisterdate")
+    public double getSumByCustomerRegisterDate(@RequestParam int month) {
+        return orderService.getSumByCustomerRegisterDate(month);
+    }
+
+    @GetMapping(path = "/getallbycustomerregisterdate")
+    public List<Order> getAllByCustomerRegisterDate(@RequestParam int month) {
+        return orderService.getAllByCustomerRegisterDate(month);
+    }
+
+    @GetMapping(path = "/getaveragebypricegreaterthan")
+    public double getAverageByPriceGreaterThan(@RequestParam double price) {
+        return orderService.getAverageByPriceGreaterThan(price);
+    }
 }
