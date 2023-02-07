@@ -55,4 +55,14 @@ public class OrderManager implements OrderService {
         }
     }
 
+    @Override
+    public List<Order> getAllByPriceLessThan(double price) {
+        return orderDao.getAllByPriceLessThan(price);
+    }
+
+    @Override
+    public List<Order> getAllByPriceMoreThan(double price) {
+        return orderDao.getAllByPriceGreaterThan(price);
+    }
+
 }

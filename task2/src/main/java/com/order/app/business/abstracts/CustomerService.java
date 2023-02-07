@@ -10,4 +10,6 @@ public interface CustomerService extends BaseService<Customer> {
     List<Customer> getAllByFirstNameContains(String letter);
 
     List<Customer> getAllByRegisterDate(LocalDate date);
+
+    List<Customer> getAllByOrderPriceLessThan(double price);
 }

@@ -11,7 +11,9 @@ import com.order.app.entities.concretes.Customer;
 @Repository
 public interface CustomerDao extends JpaRepository<Customer, Integer> {
     
-    List<Customer> getAllByFirstNameContains(String letter);
+    List<Customer> getAllByFirstNameContainsIgnoreCase(String letter);
 
     List<Customer> getAllByRegisterDate(LocalDate date);
+
+    List<Customer> getAllByOrders_PriceLessThan(double price);
 }

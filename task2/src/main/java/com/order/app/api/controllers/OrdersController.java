@@ -51,4 +51,14 @@ public class OrdersController {
         orderService.delete(id);
     }
 
+    @GetMapping(path = "/getallbypricelessthan")
+    public List<Order> getAllByPriceLessThan(@RequestParam double price) {
+        return orderService.getAllByPriceLessThan(price);
+    }
+
+    @GetMapping(path = "/getallbypricegreaterthan")
+    public List<Order> getAllByPriceMoreThan(@RequestParam double price) {
+        return orderService.getAllByPriceMoreThan(price);
+    }
+
 }

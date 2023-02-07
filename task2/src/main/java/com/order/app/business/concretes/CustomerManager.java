@@ -60,12 +60,17 @@ public class CustomerManager implements CustomerService {
 
     @Override
     public List<Customer> getAllByFirstNameContains(String letter) {
-        return customerDao.getAllByFirstNameContains(letter);
+        return customerDao.getAllByFirstNameContainsIgnoreCase(letter);
     }
 
     @Override
     public List<Customer> getAllByRegisterDate(LocalDate date) {
         return customerDao.getAllByRegisterDate(date);
+    }
+
+    @Override
+    public List<Customer> getAllByOrderPriceLessThan(double price) {
+        return customerDao.getAllByOrders_PriceLessThan(price);
     }
 
 }

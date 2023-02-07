@@ -62,4 +62,9 @@ public class CustomersController {
     public List<Customer> getAllByRegisterDate(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
         return customerService.getAllByRegisterDate(date);
     }
+
+    @GetMapping(path = "/getallbyorderpricelessthan")
+    public List<Customer> getAllByOrderPriceLessThan(@RequestParam double price) {
+        return customerService.getAllByOrderPriceLessThan(price);
+    }
 }
