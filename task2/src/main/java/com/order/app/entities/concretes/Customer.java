@@ -17,6 +17,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/* 
+ * Customer entity
+ * Describes customers table as a java class
+ */
 @Entity
 @Table(name = "customers")
 @Data

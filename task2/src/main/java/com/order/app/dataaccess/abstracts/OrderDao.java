@@ -1,6 +1,5 @@
 package com.order.app.dataaccess.abstracts;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,6 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import com.order.app.entities.concretes.Order;
 
+/*
+ * OrderDao interface
+ * Keeps Order entity's sql queries and functions by using JpaRepository
+ */
 @Repository
 public interface OrderDao extends JpaRepository<Order, Integer> {
 

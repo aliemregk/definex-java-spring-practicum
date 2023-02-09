@@ -16,6 +16,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/* 
+ * Company entity
+ * Describes companies table as a java class
+ */
 @Entity
 @Table(name = "companies")
 @Data

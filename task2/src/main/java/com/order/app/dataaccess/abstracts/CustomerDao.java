@@ -8,6 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import com.order.app.entities.concretes.Customer;
 
+/*
+ * CustomerDao interface
+ * Keeps Customer entity's sql queries and functions by using JpaRepository
+ */
 @Repository
 public interface CustomerDao extends JpaRepository<Customer, Integer> {
     

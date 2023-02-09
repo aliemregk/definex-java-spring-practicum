@@ -13,6 +13,10 @@ import com.order.app.business.abstracts.CustomerService;
 import com.order.app.dataaccess.abstracts.CustomerDao;
 import com.order.app.entities.concretes.Customer;
 
+/*
+ * CustomerManager class implements CustomerService
+ * Business class for Customer Entity
+ */
 @Service
 public class CustomerManager implements CustomerService {
 
@@ -23,11 +27,17 @@ public class CustomerManager implements CustomerService {
         this.customerDao = customerDao;
     }
 
+    /* 
+     * Return all customers
+     */
     @Override
     public List<Customer> getAll() {
         return customerDao.findAll(Sort.by(Direction.ASC, "id"));
     }
 
+    /* 
+     * Return one customer according to given id
+     */
     @Override
     public Customer getById(int id) {
         Optional<Customer> result = customerDao.findById(id);
@@ -37,11 +47,17 @@ public class CustomerManager implements CustomerService {
         return null;
     }
 
+    /* 
+     * Add a new customer
+     */
     @Override
     public void add(Customer customer) {
         customerDao.save(customer);
     }
 
+    /* 
+     * Update an existing customer
+     */
     @Override
     public void update(Customer customer) {
         Optional<Customer> result = customerDao.findById(customer.getId());
@@ -50,6 +66,9 @@ public class CustomerManager implements CustomerService {
         }
     }
 
+    /* 
+     * Delete an existing customer
+     */
     @Override
     public void delete(int id) {
         Optional<Customer> result = customerDao.findById(id);
@@ -58,16 +77,25 @@ public class CustomerManager implements CustomerService {
         }
     }
 
+    /* 
+     * Return customers whose name contains given letter
+     */
     @Override
     public List<Customer> getAllByFirstNameContains(String letter) {
         return customerDao.getAllByFirstNameContainsIgnoreCase(letter);
     }
 
+    /* 
+     * Return customers according to given register date
+     */
     @Override
     public List<Customer> getAllByRegisterDate(LocalDate date) {
         return customerDao.getAllByRegisterDate(date);
     }
 
+    /* 
+     * Return customers who have an order whose price is less than given amount
+     */
     @Override
     public List<Customer> getAllByOrderPriceLessThan(double price) {
         return customerDao.getAllByOrders_PriceLessThan(price);

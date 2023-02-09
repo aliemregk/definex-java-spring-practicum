@@ -8,6 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import com.order.app.entities.concretes.Company;
 
+/*
+ * CompanyDao interface
+ * Keeps Company entity's sql queries and functions by using JpaRepository
+ */
 @Repository
 public interface CompanyDao extends JpaRepository<Company, Integer> {
 

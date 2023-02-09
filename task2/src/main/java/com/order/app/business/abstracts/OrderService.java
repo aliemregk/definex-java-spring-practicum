@@ -4,6 +4,10 @@ import java.util.List;
 
 import com.order.app.entities.concretes.Order;
 
+/*
+ * OrderService interface extends BaseService
+ * Defines Order entity-specific functions
+ */
 public interface OrderService extends BaseService<Order> {
 
     List<Order> getAllByPriceLessThan(double price);
