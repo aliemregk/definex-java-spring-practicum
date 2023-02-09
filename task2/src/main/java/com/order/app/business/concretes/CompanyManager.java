@@ -57,4 +57,14 @@ public class CompanyManager implements CompanyService {
         }
     }
 
+    @Override
+    public List<Company> getAllByMonthlyPriceAverage(int month, double price) {
+        return companyDao.getAllByMonthlyPriceAverage(month, price);
+    }
+
+    @Override
+    public List<Company> getAllByOrderDate(int month) { 
+        return companyDao.getAllByOrders_Date(month);
+    }
+
 }

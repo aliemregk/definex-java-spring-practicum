@@ -51,4 +51,14 @@ public class CompaniesController {
         companyService.delete(id);
     }
 
+    @GetMapping(path = "/getallbymonthlypriceaverage")
+    public List<Company> getAllByMonthlyPriceAverage(@RequestParam int month, @RequestParam double price) {
+        return companyService.getAllByMonthlyPriceAverage(month, price);
+    }
+
+    @GetMapping(path = "/getallbyorderdate")
+    public List<Company> getAllByOrderDate(@RequestParam int month) {
+        return companyService.getAllByOrderDate(month);
+    }
+
 }
