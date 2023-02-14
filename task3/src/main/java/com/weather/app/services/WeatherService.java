@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import com.weather.app.responses.GetCurrentWeatherResponse;
+import com.weather.app.responses.GetWeatherForecastResponse;
 
 import reactor.core.publisher.Mono;
 
@@ -29,4 +30,11 @@ public class WeatherService {
                 .bodyToMono(GetCurrentWeatherResponse.class);
     }
 
+    public Mono<GetWeatherForecastResponse> getWeatherForecast(String city, int days) {
+        return webClient.get()
+                .uri("forecast.json?key=" + apiKey + "&q=" + city + "&days=" + days + "&aqi=no" + "&alerts=no")
+                .accept(MediaType.APPLICATION_JSON)
+                .retrieve()
+                .bodyToMono(GetWeatherForecastResponse.class);
+    }
 }
